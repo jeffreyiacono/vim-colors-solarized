@@ -297,6 +297,7 @@ let colors_name = "solarized"
 if (has("gui_running") && g:solarized_degrade == 0)
     let s:vmode       = "gui"
     let s:base03      = "#002b36"
+    let s:base025     = "#004e62"
     let s:base02      = "#073642"
     let s:base01      = "#586e75"
     let s:base00      = "#657b83"
@@ -490,6 +491,7 @@ exe "let s:bg_cyan      = ' ".s:vmode."bg=".s:cyan   ."'"
 exe "let s:fg_none      = ' ".s:vmode."fg=".s:none   ."'"
 exe "let s:fg_back      = ' ".s:vmode."fg=".s:back   ."'"
 exe "let s:fg_base03    = ' ".s:vmode."fg=".s:base03 ."'"
+exe "let s:fg_base025   = ' ".s:vmode."fg=".s:base025."'"
 exe "let s:fg_base02    = ' ".s:vmode."fg=".s:base02 ."'"
 exe "let s:fg_base01    = ' ".s:vmode."fg=".s:base01 ."'"
 exe "let s:fg_base00    = ' ".s:vmode."fg=".s:base00 ."'"
@@ -631,8 +633,8 @@ if      (g:solarized_visibility=="high")
     exe "hi! SpecialKey"     .s:fmt_revr   .s:fg_red    .s:bg_none
     exe "hi! NonText"        .s:fmt_bold   .s:fg_base1  .s:bg_none
 elseif  (g:solarized_visibility=="low")
-    exe "hi! SpecialKey"     .s:fmt_bold   .s:fg_base01 .s:bg_base02
-    exe "hi! NonText"        .s:fmt_bold   .s:fg_base01 .s:bg_base02
+    exe "hi! SpecialKey"     .s:fmt_bold   .s:fg_base025 .s:bg_none
+    exe "hi! NonText"        .s:fmt_bold   .s:fg_base025 .s:bg_none
 else
     exe "hi! SpecialKey"     .s:fmt_bold   .s:fg_red    .s:bg_none
     exe "hi! NonText"        .s:fmt_bold   .s:fg_base01 .s:bg_none
